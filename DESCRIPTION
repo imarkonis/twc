@@ -1,11 +1,18 @@
 Package: twc
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
+Version: 0.0.1
+Author: 
+  c(person(given = "Mijael Rodrigo", family = "Vargas Godoy",
+           email = "mirovago@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-1828-9266")),
+    person(given = "Yannis", family = "Markonis",
+           email = "imarkonis@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0003-0144-8969")))
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL-3
 Encoding: UTF-8
-LazyData: true
+LazyData: false
+RoxygenNote: 7.3.1
