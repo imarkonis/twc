@@ -15,6 +15,9 @@ infoNC(x)
 \arguments{
 \item{x}{Raster* Object; character}
 }
+\value{
+character
+}
 \description{
 The function \code{infoNC} displays the specification of the desired file.
 }

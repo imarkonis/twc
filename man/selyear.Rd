@@ -31,12 +31,4 @@ If `x` is a data.table, its columns should be named: "lon", "lat", "date", and "
 
 If `x` is a filename, it should point to a *.nc file.
 }
-\examples{
-\dontrun{
-download_data("gldas-vic", tempdir(), timestep = "yearly")
-r <- raster::brick(paste0(tempdir(),
-"/gldas-vic_tp_mm_land_194801_201412_025_yearly.nc"))
-s <- selyear(r, c(2000, 2010))
-}
-}
 \keyword{internal}

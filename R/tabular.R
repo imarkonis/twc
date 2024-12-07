@@ -2,6 +2,9 @@
 #'
 #' Function to transform a raster brick into a data.table
 #'
+#' @import data.table doParallel foreach parallel
+#' @importFrom methods as setGeneric setMethod
+#' @importFrom raster as.data.frame brick nlayers
 #' @param x Raster* object; filename (character, see details)
 #' @return data.table
 #' @export

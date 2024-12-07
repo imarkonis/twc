@@ -1,14 +1,18 @@
 #' Multiply by days per month
 #'
 #' The function \code{muldpm} multiplies the value by days per month.
-#'
+#' 
 #' @details
 #' `x` object with monthly data in [units/day]
-#'
+#' 
 #' If `x` is a data.table, its columns should be named: "lon", "lat", "date", and "value"
-#'
+#' 
 #' If `x` is a filename, it should point to a *.nc file.
-#'
+#' 
+#' @import data.table
+#' @importFrom methods as setGeneric setMethod
+#' @importFrom lubridate days_in_month
+#' @importFrom raster brick getZ
 #' @param x Raster* object; data.table (see details); filename (character, see details)
 #' @return Raster* object; data.table
 #' @export

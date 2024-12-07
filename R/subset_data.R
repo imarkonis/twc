@@ -4,11 +4,12 @@
 #'
 #' @details
 #' If `x` is a data.table, its columns should be named: "lon", "lat", "date", and "value"
-#'
+#' 
 #' If `x` is a filename, it should point to a *.nc file.
-#'
+#' 
 #' If subsetting only in space or time then the arguments must be passed by name. I.e., \code{subset_data(x, box = ...)} (space) or \code{subset_data(x, yrs = ...)} (time)
-#'
+#' 
+#' @importFrom methods is setGeneric setMethod
 #' @param x Raster* object; data.table (see details); filename (character, see details)
 #' @param box numeric. Bounding box in the form: (xmin, xmax, ymin, ymax)
 #' @param yrs numeric. Time range in the form: (start_year, end_year)

@@ -6,7 +6,7 @@
 \alias{twc-package}
 \title{twc: Terrestrial Water Cycle}
 \description{
-twc is an R package that .
+twc is an R package that that constitutes the core functions to analyze terrestrial water cycle data across various spatio-temporal scales.
 }
 \seealso{
 Useful links:

@@ -7,17 +7,13 @@
 #'
 #' If `x` is a filename, it should point to a *.nc file.
 #'
+#' @import data.table
+#' @importFrom methods is setGeneric setMethod
+#' @importFrom raster brick getZ setZ subset
 #' @param x Raster* object; data.table (see details); filename (character, see details)
 #' @param y numeric. Time range in the form: (start_year, end_year)
 #' @return Raster* object; data.table
 #' @keywords internal
-#' @examples
-#' \dontrun{
-#' download_data("gldas-vic", tempdir(), timestep = "yearly")
-#' r <- raster::brick(paste0(tempdir(),
-#' "/gldas-vic_tp_mm_land_194801_201412_025_yearly.nc"))
-#' s <- selyear(r, c(2000, 2010))
-#' }
 
 setGeneric("selyear", function(x, y) standardGeneric("selyear"))
 

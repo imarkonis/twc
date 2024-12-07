@@ -2,7 +2,11 @@
 #'
 #' The function \code{infoNC} displays the specification of the desired file.
 #'
+#' @importFrom raster brick
+#' @importFrom methods setGeneric setMethod
+#' @importFrom utils capture.output
 #' @param x Raster* Object; character
+#' @return character
 #' @export
 
 setGeneric("infoNC", function(x) standardGeneric("infoNC"))

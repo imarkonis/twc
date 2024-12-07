@@ -2,6 +2,9 @@
 #'
 #' Function to save data compatible with pRecipe in .nc file
 #'
+#' @import ncdf4
+#' @importFrom methods as is
+#' @importFrom raster getValues getZ xFromCol yFromRow
 #' @param x Raster* object
 #' @param file character
 #' @param name character
@@ -46,15 +49,15 @@ saveNC <- function(x, file, name = "tp", longname = "Total precipitation", units
                        units = "days since 1970-01-01 00:00:0.0",
                        calendar = "standard",
                        unlim = TRUE)
-  deftp <- ncvar_def(name = name, units = units,
-                     list(deflon, deflat, deftime),
+  deftp <- ncvar_def(name = name, units = units, 
+                     list(deflon, deflat, deftime), 
                      missval = -9999,
                      compression = 4,
                      longname = longname,
                      prec = "float")
   ncoutput <- nc_create(file, list(deftp), force_v4 = TRUE, verbose = FALSE)
   ncvar_put(ncoutput, deftp, tp)
-  ncatt_put(ncoutput,"lon","axis","X")
+  ncatt_put(ncoutput,"lon","axis","X") 
   ncatt_put(ncoutput,"lat","axis","Y")
   ncatt_put(ncoutput,"time","axis","T")
   nc_close(ncoutput)

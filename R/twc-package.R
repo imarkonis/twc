@@ -1,6 +1,6 @@
 #' twc: Terrestrial Water Cycle
 #'
-#' twc is an R package that .
+#' twc is an R package that that constitutes the core functions to analyze terrestrial water cycle data across various spatio-temporal scales.
 #'
 #' @author \strong{Coded by:} Mijael Rodrigo Vargas Godoy \email{vargas_godoy@fzp.czu.cz}
 #' @author \strong{Conceptual design by:} Mijael Rodrigo Vargas Godoy \email{vargas_godoy@fzp.czu.cz} and Yannis Markonis \email{markonis@fzp.czu.cz}

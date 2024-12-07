@@ -7,17 +7,13 @@
 #'
 #' If `x` is a filename, it should point to a *.nc file.
 #'
+#' @import data.table
+#' @importFrom methods setGeneric setMethod
+#' @importFrom raster brick crop extent
 #' @param x Raster* object; data.table (see details); filename (character, see details)
 #' @param y numeric. Bounding box in the form: (xmin, xmax, ymin, ymax)
 #' @return Raster* object; data.table
 #' @keywords internal
-#' @examples
-#' \dontrun{
-#' download_data("gldas-vic", tempdir(), timestep = "yearly")
-#' r <- raster::brick(paste0(tempdir(),
-#' "/gldas-vic_tp_mm_land_194801_201412_025_yearly.nc"))
-#' s <- sellonlatbox(r, c(12.24, 18.85, 48.56, 51.12))
-#' }
 
 setGeneric("sellonlatbox", function(x, y) standardGeneric("sellonlatbox"))
 

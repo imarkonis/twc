@@ -1,12 +1,17 @@
 #' Crop precipitation data sets
 #'
 #' The function \code{crop_data} crops the data sets using a shapefile mask.
-#'
+#' 
 #' @details
 #' If `x` is a data.table, its columns should be named: "lon", "lat", "date", and "value"
-#'
+#' 
 #' If `x` is a filename, it should point to a *.nc file.
 #'
+#' @import data.table
+#' @import sp
+#' @importFrom methods as setGeneric setMethod
+#' @importFrom raster brick crop extent mask
+#' @importFrom sf read_sf st_bbox
 #' @param x Raster* object; data.table (see details); filename (character; see details)
 #' @param y filename (character). Path to a *.shp file
 #' @return Raster* object; data.table

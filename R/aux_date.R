@@ -2,6 +2,7 @@
 #'
 #' Function to fix dates
 #'
+#' @importFrom methods as is
 #' @param x output from getZ()
 #' @return Date
 #' @keywords internal

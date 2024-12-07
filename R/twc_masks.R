@@ -2,6 +2,7 @@
 #'
 #' Function for various masks.
 #'
+#' @import data.table
 #' @return data.table
 #' @export
 

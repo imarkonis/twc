@@ -4,9 +4,9 @@
 #'
 #' @details
 #' If `x` is a data.table, its columns should be named: "lon", "lat", "date", and "value"
-#'
+#' 
 #' If `x` is a filename, it should point to a *.nc file.
-#'
+#' 
 #' `stat` is a character string describing the desired aggregation function. Suitable options are:
 #' \itemize{
 #' \item "max"
@@ -15,7 +15,11 @@
 #' \item "min"
 #' \item "sum" (default)
 #' }
-#'
+#' 
+#' @import data.table
+#' @importFrom methods as setGeneric setMethod
+#' @importFrom raster brick getZ setZ zApply
+#' @importFrom utils tail
 #' @param x Raster* object; data.table (see details); filename (character, see details)
 #' @param stat character
 #' @return Raster* object; data.table
