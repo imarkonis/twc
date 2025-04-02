@@ -16,7 +16,7 @@ Encoding: UTF-8
 LazyData: false
 RoxygenNote: 7.3.2
 Imports: data.table, doParallel, foreach, lubridate, magrittr, methods, ncdf4,
-  parallel, raster, sf, sp,utils
+  parallel, raster, sf, sp, stats, utils
 URL: https://github.com/imarkonis/twc
 BugReports: https://github.com/imarkonis/twc/issues
 SystemRequirements: PROJ (>= 6, https://proj.org/download.html), 
