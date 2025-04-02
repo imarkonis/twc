@@ -1,6 +1,6 @@
 Package: twc
 Title: Terrestrial Water Cycle
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
   c(person(given = "Mijael Rodrigo", family = "Vargas Godoy",
            email = "mirovago@gmail.com", role = c("aut", "cre"),
